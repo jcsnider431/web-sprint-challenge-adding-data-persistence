@@ -3,19 +3,19 @@ exports.up = function(knex) {
     .createTable("projects", (table) => {
       table.increments("project_id");
       table.string("project_name", 128).unique().notNullable();
-      table.text("project_description");
-      table.boolean("project_completed").notNullable();
+      table.string("project_description");
+      table.boolean("project_completed").defaultTo(false);
     })
     .createTable("resources", (table) => {
       table.increments("resource_id");
       table.string("resource_name", 128).unique().notNullable();
-      table.text("resource_description");
+      table.string("resource_description");
     })
     .createTable("tasks", (table) => {
       table.increments("task_id");
-      table.text("task_description").notNullable();
+      table.string("task_description").notNullable();
       table.string("task_notes", 128);
-      table.boolean("task_completed");
+      table.boolean("task_completed").defaultTo(false);
       table
         .integer("project_id")
         .unsigned()
