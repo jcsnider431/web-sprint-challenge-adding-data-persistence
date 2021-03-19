@@ -28,7 +28,7 @@ router.post("/", (req, res) => {
 
 router.use((err, req, res, next) => {
   res.status(500).json({
-    message: "something went wrong...",
+    message: "something went wrong.",
     error: err.message,
   });
 });
