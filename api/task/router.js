@@ -13,7 +13,6 @@ router.get("/", (req, res, next) => {
       next(error);
     });
 });
-
 router.post("/", (req, res, next) => {
   const newTask = req.body;
   Task.addTask(newTask)

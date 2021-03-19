@@ -58,20 +58,25 @@ Build the migration(s) in Knex inside the `data/migrations` folder using appropr
 Build an API inside the `api` folder with endpoints for:
 
 - [ ] `[POST] /api/resources`
+
   - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
 - [ ] `[GET] /api/resources`
+
   - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
 - [ ] `[POST] /api/projects`
+
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
 - [ ] `[GET] /api/projects`
+
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
 - [ ] `[POST] /api/tasks`
+
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_id:1}`
 
@@ -112,6 +117,11 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain the difference between Relational Databases and SQL.
+   SQL stands for Structured Query Language and allows you to work with relational databases.
 2. Why do tables need a Primary Key?
+   Primary key allows you to assign a unique id to a value in any table.
+   This is useful when you need to make references to specific values in a table.
 3. What is the name given to a table column that references the Primary Key on another table?
+   Foreign key.
 4. What do we need in order to have a _many to many_ relationship between two tables?
+   A table that has a many to many relatioship between two tables joins each of the tables using a foreign key from each table.

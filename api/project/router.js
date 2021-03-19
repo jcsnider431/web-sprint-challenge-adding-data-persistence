@@ -13,7 +13,6 @@ router.get("/", (req, res, next) => {
       next(error);
     });
 });
-
 router.post("/", (req, res) => {
   const newProject = req.body;
   Project.addProject(newProject)
@@ -25,7 +24,6 @@ router.post("/", (req, res) => {
       console.log(error.message);
     });
 });
-
 router.use((err, req, res, next) => {
   res.status(500).json({
     message: "something went wrong.",
